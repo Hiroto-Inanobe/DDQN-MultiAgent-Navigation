@@ -31,17 +31,25 @@ The environment is modeled as a partially observable grid world inspired by a ra
 | Observation Channels | 5 |
 | Action Space | 9 |
 
-### Available Actions
+### Action Space (Discrete 9-direction movement)
 
-- Up-Left
-- Up
-- Up-Right
-- Left
-- Stay
-- Right
-- Down-Left
-- Down
-- Down-Right
+Each agent selects one of the following actions:
+
+| Action ID | Movement |
+|-----------|----------|
+| 0 | Up-Left |
+| 1 | Up |
+| 2 | Up-Right |
+| 3 | Left |
+| 4 | Stay |
+| 5 | Right |
+| 6 | Down-Left |
+| 7 | Down |
+| 8 | Down-Right |
+
+### Environment Visualization
+
+![Environment](figures/environment.png)
 
 ---
 
@@ -59,6 +67,12 @@ Cells hidden by obstacles are represented as -1.
 
 ---
 
+### State Representation
+
+![State Representation](figures/state.png)
+
+---
+
 ## Neural Network Architecture
 
 | Layer | Output Channels |
@@ -70,6 +84,12 @@ Cells hidden by obstacles are represented as -1.
 | Output Layer | 9 |
 
 Activation Function: ReLU
+
+---
+
+### Q-Network Architecture
+
+![Q Network](figures/q_network.png)
 
 ---
 
@@ -110,6 +130,17 @@ Experimental results demonstrated that agents successfully learned:
 - Navigation through narrow passages
 
 Average rewards increased during training, while collision frequency and evacuation time decreased.
+
+### Training Performance
+
+![Training Curve](results/reward_curve.png)
+![Training Curve](results/step_curve.png)
+![Training Curve](results/collision_curve.png)
+
+### Agent Movement Heatmap
+
+![Heatmap](results/heatmap_episode1.png)
+![Heatmap](results/heatmap_episode20000.png)
 
 ---
 
