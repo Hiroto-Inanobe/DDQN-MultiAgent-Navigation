@@ -139,3 +139,7 @@ python src/train.py
 ## License
 
 Released under the MIT License.
+
+## Author
+
+Anonymous (for privacy)
