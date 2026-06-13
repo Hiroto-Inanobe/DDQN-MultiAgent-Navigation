@@ -131,7 +131,7 @@ LICENSE
 ```bash
 pip install -r requirements.txt
 
-python src/train_ddqn.py
+python src/train.py
 ```
 
 ---
